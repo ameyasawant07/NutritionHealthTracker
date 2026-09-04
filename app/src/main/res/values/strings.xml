@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Nutrition &amp; Health Tracker</string>
+    <string name="app_subtitle">Your simple companion for a healthier lifestyle</string>
+    <string name="welcome_message">Welcome to Nutrition &amp; Health Tracker</string>
+    
+    <!-- Home Menu Items -->
+    <string name="menu_profile">My Profile</string>
+    <string name="menu_bmi">BMI Calculator</string>
+    <string name="menu_nutrition">Nutrition Tracker</string>
+    <string name="menu_water">Water Tracker</string>
+    <string name="menu_history">Health History</string>
+    <string name="menu_tips">Health Tips</string>
+
+    <!-- Disclaimers -->
+    <string name="bmi_disclaimer">Disclaimer: BMI is a general screening measure and does not replace professional medical advice.</string>
+    <string name="tips_disclaimer">Disclaimer: These tips are for general educational purposes and are not a substitute for professional medical advice.</string>
+</resources>

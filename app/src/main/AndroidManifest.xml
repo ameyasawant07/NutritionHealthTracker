@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.NutritionHealthTracker"
+        tools:targetApi="31">
+
+        <!-- Splash Activity (Launcher) -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.NutritionHealthTracker.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Login / Register Activity -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:label="Account Sign In"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Main Home Dashboard -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:label="@string/app_name" />
+
+        <!-- Profile Activity -->
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false"
+            android:label="My Profile"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Notification Settings Activity -->
+        <activity
+            android:name=".NotificationSettingsActivity"
+            android:exported="false"
+            android:label="Notification Settings"
+            android:parentActivityName=".ProfileActivity" />
+
+        <!-- BMI Calculator Activity -->
+        <activity
+            android:name=".BMICalculatorActivity"
+            android:exported="false"
+            android:label="BMI Calculator"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Weight Tracker Activity -->
+        <activity
+            android:name=".WeightTrackerActivity"
+            android:exported="false"
+            android:label="Weight Tracker"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Nutrition Tracker Activity -->
+        <activity
+            android:name=".NutritionActivity"
+            android:exported="false"
+            android:label="Nutrition Tracker"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Water Tracker Activity -->
+        <activity
+            android:name=".WaterTrackerActivity"
+            android:exported="false"
+            android:label="Water Tracker"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Exercise Tracker Activity -->
+        <activity
+            android:name=".ExerciseTrackerActivity"
+            android:exported="false"
+            android:label="Exercise Tracker"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Sleep Tracker Activity -->
+        <activity
+            android:name=".SleepTrackerActivity"
+            android:exported="false"
+            android:label="Sleep Tracker"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Health History Activity (6 Tabs) -->
+        <activity
+            android:name=".HealthHistoryActivity"
+            android:exported="false"
+            android:label="Health History"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Graphs & Analytics Activity -->
+        <activity
+            android:name=".GraphsActivity"
+            android:exported="false"
+            android:label="Health Analytics"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Streaks Activity -->
+        <activity
+            android:name=".StreakActivity"
+            android:exported="false"
+            android:label="Streaks &amp; Achievements"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Reports Activity -->
+        <activity
+            android:name=".ReportsActivity"
+            android:exported="false"
+            android:label="Health Reports"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Export Data Activity -->
+        <activity
+            android:name=".ExportDataActivity"
+            android:exported="false"
+            android:label="Export My Data"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Backup & Restore Activity -->
+        <activity
+            android:name=".BackupRestoreActivity"
+            android:exported="false"
+            android:label="Backup &amp; Restore"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Health Tips Activity -->
+        <activity
+            android:name=".HealthTipsActivity"
+            android:exported="false"
+            android:label="Health Tips"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Diet Hub Activity -->
+        <activity
+            android:name=".DietHubActivity"
+            android:exported="false"
+            android:label="Diet &amp; Nutrition System"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Diet Goal Activity -->
+        <activity
+            android:name=".DietGoalActivity"
+            android:exported="false"
+            android:label="Diet Goal &amp; Preferences"
+            android:parentActivityName=".DietHubActivity" />
+
+        <!-- My Diet Plan Activity -->
+        <activity
+            android:name=".MyDietPlanActivity"
+            android:exported="false"
+            android:label="My Diet Plan"
+            android:parentActivityName=".DietHubActivity" />
+
+        <!-- Food Explorer Activity -->
+        <activity
+            android:name=".FoodExplorerActivity"
+            android:exported="false"
+            android:label="Food Explorer"
+            android:parentActivityName=".DietHubActivity" />
+
+        <!-- Protein Guide Activity -->
+        <activity
+            android:name=".ProteinGuideActivity"
+            android:exported="false"
+            android:label="Protein Guide"
+            android:parentActivityName=".DietHubActivity" />
+
+        <!-- Calorie Guide Activity -->
+        <activity
+            android:name=".CalorieGuideActivity"
+            android:exported="false"
+            android:label="Calorie Guide"
+            android:parentActivityName=".DietHubActivity" />
+
+        <!-- Healthy Food Choice Guide Activity -->
+        <activity
+            android:name=".HealthyFoodGuideActivity"
+            android:exported="false"
+            android:label="Healthy Food Choice Guide"
+            android:parentActivityName=".DietHubActivity" />
+
+        <!-- Smart Recommendations Activity -->
+        <activity
+            android:name=".SmartRecommendationsActivity"
+            android:exported="false"
+            android:label="Smart Recommendations"
+            android:parentActivityName=".DietHubActivity" />
+
+        <!-- AI Health Assistant Activity -->
+        <activity
+            android:name=".AIHealthAssistantActivity"
+            android:exported="false"
+            android:label="AI Health Assistant"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Food Scan Activity -->
+        <activity
+            android:name=".FoodScanActivity"
+            android:exported="false"
+            android:label="Scan My Food"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Food Scan Result Confirmation Activity -->
+        <activity
+            android:name=".FoodScanResultActivity"
+            android:exported="false"
+            android:label="Review Meal Scan"
+            android:parentActivityName=".FoodScanActivity" />
+
+        <!-- Food Scan History Activity -->
+        <activity
+            android:name=".FoodScanHistoryActivity"
+            android:exported="false"
+            android:label="Food Scan History"
+            android:parentActivityName=".FoodScanActivity" />
+
+        <!-- Sync Settings Activity -->
+        <activity
+            android:name=".SyncSettingsActivity"
+            android:exported="false"
+            android:label="Cloud &amp; Device Sync"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- FileProvider for CSV and JSON sharing -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.nutritionhealthtracker.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- Broadcast Receivers -->
+        <receiver
+            android:name=".receivers.AlarmReceiver"
+            android:exported="false" />
+
+        <receiver
+            android:name=".receivers.BootReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>
